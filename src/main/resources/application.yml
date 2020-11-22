@@ -1,0 +1,31 @@
+server:
+  port: 31111
+  tomcat:
+    max-threads: 250
+  compression:
+    enabled: true  #默认没有启用Http包压缩功能，但是压缩对减少带宽和加快页面加载非常有用
+
+spring:
+  application:
+    name: kafka_uptown
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  redis:
+    database:
+    host:
+    port:
+    password:
+
+kafka:
+  core-pool-size: 1
+  max-pool-size: 2
+  keep-alive-time: 0
+  work-queue-size: 1
